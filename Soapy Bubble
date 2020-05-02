@@ -111,7 +111,7 @@ void mainImage( out vec4 fragColor, in vec2 fragCoord )
         totalDist += dist;
         pos += dist * rayDir;
     }
-    fragColor = vec4(vec3(0.018),1.);	// BG Colour 방울의 경계선 밖의 색깔 
+    fragColor = vec4(vec3(0),1.);	// BG Colour 방울의 경계선 밖의 색깔 
     if(dist < MINDIST) // Found Intersection
     {
         // Calc distancefield gradient
