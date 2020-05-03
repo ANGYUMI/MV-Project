@@ -185,7 +185,7 @@ void mainImage( out vec4 fragColor, in vec2 fragCoord )
 		v+=vec3(s1,s1*s1,s1*s1*s1*s1)*a*brightness*fade; // coloring based on distance
 		
 		backCol2 += mix(.4, 1., v2) * vec3(0.0 * t3 * t3 * t3, 0.3 * t3 * t3, t3 * 1.2) * fade; // 이펙트 컬러
-
+		// backCol2 += mix(.4, 1., v2) * vec3(0.0 * t3 * t3 * t3, 0.2 * t3 * t3, t3 * 0.9) * fade; // 이펙트 컬러 (약하게)
 		
 		s+=stepsize;
 		s3 += stepsize;
