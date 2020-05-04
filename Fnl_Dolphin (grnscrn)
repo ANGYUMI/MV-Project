@@ -340,7 +340,7 @@ float softshadow( in vec3 ro, in vec3 rd, float mint, float k )
     return clamp(res,0.0,1.0);
 }
 
-const vec3 lig = vec3(0.86,0.15,0.48);
+const vec3 lig = vec3(0.46,0.25,0.68); // 빛색깔
 
 vec3 doLighting( in vec3 pos, in vec3 nor, in vec3 rd, float glossy, float glossy2, float shadows, in vec3 col, float occ )
 {
