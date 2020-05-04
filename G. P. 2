@@ -75,7 +75,7 @@ vec3 getFragmentColor (in vec3 origin, in vec3 direction) {
 		}
 
 		// Check whether we hit something
-		vec3 backColor = vec3 (0.0, 0.0, 0.1 + 0.2 * max (0.0, dot (-direction, lightDirection)));
+		vec3 backColor = vec3 (0.0, 0.0, 0.0 + 0.0 * max (0.0, dot (-direction, lightDirection))); // 배경색
 		if (dist >= 0.0) { // 10.0 //100.0
 			fragColor = fragColor * (1.0 - intensity) + backColor * intensity;
 			break;
