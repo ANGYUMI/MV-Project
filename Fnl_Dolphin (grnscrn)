@@ -222,7 +222,7 @@ vec2 sdWaterCheap( vec3 p )
 {
     vec2 q = 0.00*p.xz; // 파도잔물결정도 
     //    vec2 q = 0.05*p.xz;
-	float f = 0.0;
+	float f = 1.0; // 수면 경계 
     f += 0.50000*almostAbs(noise( q )); q = m2*q*2.02; q -= 0.1*iTime;
     f += 0.25000*almostAbs(noise( q )); q = m2*q*2.03; q += 0.2*iTime;
     f += 0.12500*almostAbs(noise( q )); q = m2*q*2.01; q -= 0.4*iTime;
