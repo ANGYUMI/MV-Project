@@ -58,7 +58,7 @@ vec3 stars (vec2 v) {
 void mainImage( out vec4 fragColor, in vec2 U )
 {
     vec2 uv = (2.*U-iResolution.xy)/iResolution.y;
-   	float q = 1.2+0.1*min(17.,iTime); // 카메라 줌
+   	float q = 1.2+0.8*min(17.,iTime); // 카메라 줌
     vec3 p = vec3(0,0,-q);
     vec3 d = normalize(vec3(uv,4.));
     mouse = iMouse.xy/iResolution.xy;
@@ -76,6 +76,6 @@ void mainImage( out vec4 fragColor, in vec2 U )
         col *= sh+0.4;
     }
     float l = length(uv-vec2(0.2,0))*q;
-    col = col+.02*vec3(0.8,0.2,1.0)*(uv.x+0.5)*exp(-0.01*l*l*l*l)*q; // 라이트 컬러 
+    col = col+.02*vec3(0.0,0.0,0.0)*(uv.x+0.5)*exp(-0.01*l*l*l*l)*q; // 라이트 컬러 
     fragColor = vec4(col,1);  
 }
