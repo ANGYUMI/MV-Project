@@ -169,8 +169,8 @@ void mainImage( out vec4 fragColor, in vec2 fragCoord )
 	//for (int i = 0; i < 32; ++i) low += fft(float(i) / 255.);
 	
     // ------ 카메라 회전 , 줌 ------ // 이 요소에 마우스 컨트롤 추가 
-	ray_t r = lookat(vec3(0., 9., 16.)*rY(noise(t*3.)*0.6/* + low*/), vec3(3.), normalize(vec3(p, -2.0)));
-
+	ray_t r = lookat(vec3(0., 9., 16.)*rY(noise(t*3.)*0.6/* + low*/), vec3(2.), normalize(vec3(p, -2.0)));
+// 	ray_t r = lookat(vec3(0., 9., 16.)*rY(noise(t*3.)*0.6/* + low*/), vec3(1.), normalize(vec3(p, -2.0)));
 	vec3 color = vec3(0.);
 	float refl = 1.6;
 	for (int i = 0; i < 2; ++i) {
